@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Luck</title>
+    <style>
+        #wheel {
+            width: 300px;
+            height: 300px;
+            border: 10px solid #f39c12;
+            border-radius: 50%;
+            position: relative;
+        }
+        #spinButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f39c12;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #arrow {
+            position: absolute;
+            width: 0; 
+            height: 0; 
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 20px solid red;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="wheel">
+        <canvas id="canvas" width="300" height="300"></canvas>
+        <div id="arrow"></div>
+    </div>
+    <button id="spinButton">Spin the Wheel!</button>
+
+    <script src="wheel.js"></script>
+</body>
+</html>
