@@ -13,10 +13,6 @@ let currentAngle = 0;
 let spinning = false;
 
 function drawWheel() {
-    // Șterge canvas-ul pentru a redesena roata
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Desenează fiecare secțiune a roții
     for (let i = 0; i < numSections; i++) {
         const startAngle = i * anglePerSection;
         const endAngle = (i + 1) * anglePerSection;
