@@ -38,8 +38,8 @@ function drawWheel() {
 function spinWheel() {
     if (spinning) return;
     spinning = true;
-    let spinDuration = Math.random() * 3000 + 2000;
-    let spinSpeed = Math.random() * 0.1 + 0.05;
+    let spinDuration = Math.random() * 3000 + 2000; // Durata în milisecunde
+    let spinSpeed = Math.random() * 0.1 + 0.05; // Viteza de învârtire
 
     const spin = setInterval(() => {
         currentAngle += spinSpeed;
@@ -54,7 +54,7 @@ function spinWheel() {
 
     setTimeout(() => {
         clearInterval(spin);
-        const selectedIndex = Math.floor((currentAngle / anglePerSection) % numSections);
+        const selectedIndex = Math.floor(((2 * Math.PI) - (currentAngle % (2 * Math.PI))) / anglePerSection) % numSections;
         alert(`Congratulations! You won: ${sections[selectedIndex]}`);
         spinning = false;
     }, spinDuration);
