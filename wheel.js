@@ -13,6 +13,8 @@ let currentAngle = 0;
 let spinning = false;
 
 function drawWheel() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Curățăm canvas-ul
+
     for (let i = 0; i < numSections; i++) {
         const startAngle = i * anglePerSection;
         const endAngle = (i + 1) * anglePerSection;
@@ -28,11 +30,11 @@ function drawWheel() {
         // Desenează textul în fiecare secțiune
         ctx.save();
         ctx.translate(150, 150);
-        ctx.rotate(startAngle + anglePerSection / 2);
+        ctx.rotate(startAngle + anglePerSection / 2); // Rotim pentru a poziționa textul corect
         ctx.textAlign = "right";
         ctx.fillStyle = "white";
         ctx.font = "14px Arial";
-        ctx.fillText(sections[i], 140, 0);  // Poziționare text în secțiune
+        ctx.fillText(sections[i], 140, 0); // Poziționare text în secțiune
         ctx.restore();
     }
 }
