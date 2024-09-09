@@ -39,26 +39,4 @@ function spinWheel() {
     if (spinning) return;
     spinning = true;
     let spinDuration = Math.random() * 3000 + 2000; // Durata în milisecunde
-    let spinSpeed = Math.random() * 0.1 + 0.05; // Viteza de învârtire
-
-    const spin = setInterval(() => {
-        currentAngle += spinSpeed;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.save();
-        ctx.translate(150, 150);
-        ctx.rotate(currentAngle);
-        ctx.translate(-150, -150);
-        drawWheel();
-        ctx.restore();
-    }, 20);
-
-    setTimeout(() => {
-        clearInterval(spin);
-        const selectedIndex = Math.floor(((2 * Math.PI) - (currentAngle % (2 * Math.PI))) / anglePerSection) % numSections;
-        alert(`Congratulations! You won: ${sections[selectedIndex]}`);
-        spinning = false;
-    }, spinDuration);
-}
-
-document.getElementById("spinButton").addEventListener("click", spinWheel);
-drawWheel();
+    let spinSpeed = Math.random() * 0.1 + 0.05; // Viteza
