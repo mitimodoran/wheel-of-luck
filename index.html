@@ -21,24 +21,32 @@
             font-size: 16px;
             cursor: pointer;
         }
-        /* Stil săgeată fixă */
+        /* Stil pentru săgeata fixă */
         #arrow {
             position: absolute;
             width: 0;
             height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 20px solid red;
-            top: -40px;
-            left: 50%;
-            transform: translateX(-50%);
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 30px solid red;
+            top: 50%;
+            left: 320px; /* Mutăm săgeata în dreapta roții */
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        #container {
+            position: relative;
+            width: 400px; /* Extindem containerul pentru a include săgeata */
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <div id="wheel">
-        <canvas id="canvas" width="300" height="300"></canvas>
-        <div id="arrow"></div>
+    <div id="container">
+        <div id="wheel">
+            <canvas id="canvas" width="300" height="300"></canvas>
+        </div>
+        <div id="arrow"></div> <!-- Săgeata fixă în dreapta -->
     </div>
     <button id="spinButton">Spin the Wheel!</button>
 
