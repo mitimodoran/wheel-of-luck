@@ -1,55 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wheel of Luck</title>
-    <style>
-        #wheel {
-            width: 300px;
-            height: 300px;
-            border: 10px solid #f39c12;
-            border-radius: 50%;
-            position: relative;
-        }
-        #spinButton {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #f39c12;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        /* Stil pentru săgeata laterală */
-        #arrow {
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-left: 30px solid red;
-            top: 50%;
-            left: 320px;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-        #container {
-            position: relative;
-            width: 350px; /* Extindem containerul pentru a include săgeata */
-            margin: 0 auto;
-        }
-    </style>
+    <title>Roata Norocului</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <div id="wheel">
-            <canvas id="canvas" width="300" height="300"></canvas>
+    <div class="container">
+        <div class="wheel">
+            <img src="roata.png" alt="Roata Norocului">
         </div>
-        <div id="arrow"></div> <!-- Săgeata fixă laterală -->
+        <div class="arrow"></div>
+        <button id="spin-btn">Rotește Roata!</button>
     </div>
-    <button id="spinButton">Spin the Wheel!</button>
 
-    <script src="wheel.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
