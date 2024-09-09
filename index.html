@@ -21,20 +21,22 @@
             font-size: 16px;
             cursor: pointer;
         }
+        /* Stil pentru săgeata laterală */
         #arrow {
             position: absolute;
             width: 0;
             height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 20px solid red;
-            top: -40px;
-            left: 50%;
-            transform: translateX(-50%);
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 30px solid red;
+            top: 50%;
+            left: 320px;
+            transform: translateY(-50%);
+            z-index: 10;
         }
         #container {
             position: relative;
-            width: 300px;
+            width: 350px; /* Extindem containerul pentru a include săgeata */
             margin: 0 auto;
         }
     </style>
@@ -44,7 +46,7 @@
         <div id="wheel">
             <canvas id="canvas" width="300" height="300"></canvas>
         </div>
-        <div id="arrow"></div> <!-- Săgeata fixă -->
+        <div id="arrow"></div> <!-- Săgeata fixă laterală -->
     </div>
     <button id="spinButton">Spin the Wheel!</button>
 
